@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /* background-image: url(underwater.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background: #02074e;
+    /* background: linear-gradient(139deg, #035bffcb 0%, #b803ffb6 90%); */
+}
+.container{
+    position: relative;
+    max-width: 800px;
+    max-height: 800px;
+    padding: 10px;
+    margin: 25px auto;
+    overflow-y: auto;
+    /* background-color: red; */
+    background: linear-gradient(125deg, rgba(215, 221, 221, 0.685) 33%, rgba(202, 203, 207, 0.685) 50%);
+    border-radius: 20px;
+    /* box-shadow: inset; */
+}
+.addTask{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+.addTask input{
+    width: 90%;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+.addTask button{
+    margin: 0 10px;
+    background: black;
+    /* opacity: 0.8; */
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addTask button:hover{
+    color: skyblue;
+    background-color: #231381;
+}
+.notCompleted, .Completed{
+    margin: 5px 0;
+    padding: 20px;
+}
+h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000113;
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li{
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    font-size: 25px;
+    color: rgb(8, 8, 8);
+    background: #07f0f0bb;
+    border-radius: 10px;
+    counter-increment: my-counter;
+}
+ol.Completed li{
+    background: #0004ffbb;    
+}
+ol.Completed li:hover{
+    background-color: #07f0f0bb;
+    font-weight: 800;
+}
+ol.notCompleted li:hover{
+    background-color: #0004ffbb;
+    font-weight: 800;
+}
+ol li::before{
+    content: counter(my-counter);
+    background: #023b46b4;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+li button{
+    float: right;
+    padding: 5px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.bubbles img{
+    width: 50px;
+     animation: bubble 10s linear infinite;
+     border-radius: 50%;
+}
+
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: absolute; */
+    bottom: -100px;
+}
+@keyframes bubble{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 1s;
+    width: 15px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 3s;
+    width: 20px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 35px;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 5s;
+    width: 10px;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 6s;
+    width: 30px;
+}
